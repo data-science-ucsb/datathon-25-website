@@ -96,80 +96,163 @@
             </div>
             
             
+
+            
+            
+            
+            <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/contact/" title="Contact">
+
+                Sponsor Codes
+            </a>
+            
+            <a href="https://forms.google.com" target="_blank" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg bg-purple-200 md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus:shadow-outline" style="background-color: blueviolet;">
+                Register
+            </a>
+
+            <a id="logout-button" onclick="logOut()" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://localhost:1313/">
+                Logout
+            </a>
+
+
             
             <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline">
-                    <span>Dropdown</span>
+                <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" id="login-dropdown">
+                    <span>Log In</span>
                     <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right md:max-w-sm md:w-screen">
-                    <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg text-zinc-900">
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right md:max-w-sm md:w-screen" id="dropdown1">
+                    <div class="px-2 pt-2 pb-4 rounded-md shadow-lg text-zinc-900" style="background-color:#111827;">
                         <div class="grid grid-cols-1 gap-4">
                             
-                            <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/">
-                                <div class="p-3 text-white rounded-lg bg-primary-600 group-hover:bg-gray-900">
-                                    
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 md:h-6 md:w-6">
-                                        <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
-                                        </path>
-                                    </svg>
-                                    
+                            <a class="flex items-start p-2 bg-transparent rounded-lg group row focus:text-white focus:bg-primary-700 focus:outline-none focus:shadow-outline">
+                                
 
+
+                                <div id="loginsystem" class="fixed top-4 right-4 focus:bg-primary-700 p-1 rounded-lg shadow-md flex items-center space-x-2">
+                                    <div class="relative" style="border: 10px;">
+                                        <span style="position: absolute; top: 9px; left: 1px; color: gray;">
+                                            ✉️
+                                            
+                                        </span>
+                                        
+                                        <input 
+                                            type="email" 
+                                            id="email" 
+                                            placeholder="Email" 
+                                            class="w-full pl-10 border border-gray-300 rounded-lg px-6 py-2 text-black bg-gray-100 shadow-sm transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white"
+                                            
+                                        />
+                                        <div class="relative w-full">
+                                            <span style="position: absolute; top: 15px; left: 1px; color: gray;">
+                                                🔒
+                                            </span>
+
+                                        
+                                            <input 
+                                                type="password" 
+                                                id="password" 
+                                                placeholder="Password" 
+                                                class="w-full pl-10 border border-gray-300 rounded-lg px-6 py-2 text-black bg-gray-100 shadow-sm transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white mt-2"
+                                                
+                                            />
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <button onclick="validateLogin()" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 text-white hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline">
+                                        Login
+                                    </button>
+                    
                                 </div>
-                                <div class="ml-3">
-                                    <p class="font-semibold">Appearance</p>
-                                    <p class="text-sm">Easy customization</p>
-                                </div>
+
+                                
                             </a>
                             
-                            <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/">
-                                <div class="p-3 text-white rounded-lg bg-primary-600 group-hover:bg-gray-900">
-                                    
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 md:h-6 md:w-6">
-                                        <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-                                        </path>
-                                    </svg>
-                                    
-
-                                </div>
-                                <div class="ml-3">
-                                    <p class="font-semibold">Comments</p>
-                                    <p class="text-sm">Check your latest comments</p>
-                                </div>
-                            </a>
-                            
-                            <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/">
-                                <div class="p-3 text-white rounded-lg bg-primary-600 group-hover:bg-gray-900">
-                                    
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 md:h-6 md:w-6">
-                                        <path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z">
-                                        </path>
-                                        <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z">
-                                        </path>
-                                    </svg>
-                                    
-
-                                </div>
-                                <div class="ml-3">
-                                    <p class="font-semibold">Analytics</p>
-                                    <p class="text-sm">Take a look at your statistics</p>
-                                </div>
-                            </a>
                             
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-            
-            <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/contact/" title="Contact">
-                Contact
-            </a>
-            
-            
+
+            <script>
+                //test sheet const sheetUrl='https://docs.google.com/spreadsheets/d/e/2PACX-1vTKENTLoMEsjrskTGaCV2bcT4teWVB2utfWYTd26uyzw-mdqZK1ViFQLkV6poVwpak2qAJvUh5-KOBP/pub?output=csv';
+                const sheetUrl='https://docs.google.com/spreadsheets/d/e/2PACX-1vRxb8lmfzITZqVsREnuVNl8EbC3_deH-5Ebz-7wzAvdSvNyysZ_SsZm7be8cL2ky3lveHJ8gXZ2SXLM/pub?output=csv';
+                let validCombo={};
+
+                async function fetchCombo() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        const data = await response.text();
+
+                        const rows = data.split('\n').map(row => row.trim().split(','));
+
+                        rows.forEach(([email, password]) => {
+                            if (email && password) {
+                                validCombo[email.trim()] = password.trim();
+                            }
+
+                        })
+
+                    } catch (error){ //test error <-- ignore
+                        console.error("Error fetching", error);
+                        
+                    }
+                }
+
+                fetchCombo();
+
+
+
+                function validateLogin() {
+                    const email = document.getElementById('email').value.trim();
+                    const password = document.getElementById('password').value.trim();
+
+                    if (validCombo[email] && validCombo[email] === password) {
+                        alert('login success');
+                        localStorage.setItem('authorized', 'true');
+                        
+                        
+                        updatelogin();
+
+                    } else {
+                        alert("Invalid password, please try again.");
+                    }
+
+                }
+
+                function logOut(){
+                    localStorage.removeItem('authorized');
+                    updatelogin();
+                }
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    updatelogin();
+                });
+
+                function updatelogin(){
+                    const isAuthorized = localStorage.getItem('authorized') === 'true';
+                    const loginDropdown = document.getElementById('login-dropdown');
+                    const logoutButton = document.getElementById('logout-button');
+                    const dropdown1 = document.getElementById('dropdown1');
+
+                    if (isAuthorized){
+                        loginDropdown.style.display = 'none';
+                        logoutButton.style.display = 'block';
+                        dropdown1.style.display = 'none';
+
+                    } else {
+                        loginDropdown.style.display = 'block';
+                        logoutButton.style.display = 'none';
+                    }
+                }
+            </script>
+
+
+
+
             
             <button id="theme-toggle" type="button" class="p-2 text-sm text-gray-500 rounded-lg md: dark:text-gray-400 md:hover:bg-gray-100 dark:md:hover:bg-gray-700 md:focus:outline-none md:focus:ring-4 md:focus:ring-gray-200 dark:md:focus:ring-gray-700 md:ml-2 xs:hidden">
                 <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

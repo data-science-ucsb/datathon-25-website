@@ -29,7 +29,18 @@
 <meta property="og:type" content="article" />
 
 <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        updateLogin();
+    });
     
+    const isAuthorized = localStorage.getItem('authorized');
+
+    if (!isAuthorized){
+        window.location.href="/";
+        alert("You are not authorized. Please log in.");
+    }
+
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
     } else {
@@ -93,6 +104,12 @@
                 </div>
             </div>
             
+
+            <a href="https://forms.google.com" target="_blank" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg bg-purple-200 md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus:shadow-outline" style="background-color: blueviolet;">
+                Register
+            </a>
+
+
             
             
             <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -166,6 +183,7 @@
             <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/contact/" title="Contact">
                 Contact
             </a>
+
             
             
             
@@ -187,7 +205,8 @@
   <header class="mb-4 bg-primary-600">
     <span class="py-96">
       <h1 class="py-16 text-5xl font-black text-center text-white capitalize">
-        Contact
+        Sponsor Codes
+
       </h1>
     </span>
   </header>
@@ -202,6 +221,12 @@
 <!-- raw HTML omitted -->
 
   </div>
+
+
+  <h1 style="text-align: center;">
+    SPONSOR CODES
+  </h1>
+
 </article>
 
     
