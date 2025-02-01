@@ -1,4 +1,4 @@
 baseURL = 'https://dsucsb-datathon25.org/'
 languageCode = 'en-us'
-title = 'DS UCSB 2025 Datathon'
+title = 'DataOrbit 2025'
 theme = 'tailbliss'

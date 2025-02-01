@@ -6,22 +6,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/Clgkf3M.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/Clgkf3M.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-<title itemprop="name"> Tracks | DS UCSB 2025 Datathon 
+<title itemprop="name"> Tracks | DataOrbit 2025 
 </title>
 <meta name="description" content="Tailwind Typography @tailwindcss/typography &amp; Prose" />
-<meta property="og:title" content="Prose | DS UCSB 2025 Datathon" />
-<meta name="twitter:title" content="Prose | DS UCSB 2025 Datathon" />
-<meta itemprop="name" content="Prose | DS UCSB 2025 Datathon" />
-<meta name="application-name" content="Prose | DS UCSB 2025 Datathon" />
+<meta property="og:title" content="Prose | DataOrbit 2025" />
+<meta name="twitter:title" content="Prose | DataOrbit 2025" />
+<meta itemprop="name" content="Prose | DataOrbit 2025" />
+<meta name="application-name" content="Prose | DataOrbit 2025" />
 <meta property="og:description"
       content="Tailwind Typography @tailwindcss/typography &amp; Prose" />
-<meta property="og:site_name" content="DS UCSB 2025 Datathon" />
+<meta property="og:site_name" content="DataOrbit 2025" />
 <meta property="og:url" content="http://localhost:1313/tracks/" />
 <meta property="og:locale" content="en">
 <meta property="og:image" content="/assets/images/featured/featured-img-placeholder.png" />
@@ -62,9 +62,9 @@
     <div x-data="{ open: false }" class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="flex flex-row items-center justify-between p-4">
             <a href="/" class="flex text-gray-100 transition duration-1000 ease-in-out group">
-                <img src="/images/site-logo.svg" class="transition-opacity h-9 w-9 group-hover:opacity-50 group-focus:opacity-70" alt="DS UCSB 2025 Datathon Logo" />
-                <div class="mt-1 ml-3 text-xl font-black tracking-tight text-gray-100 uppercase transition-colors group-hover:text-gray-400/60">
-                    DS UCSB 2025 Datathon</div>
+                <img src="https://i.imgur.com/Clgkf3M.png" class="transition-opacity h-9 w-9 group-hover:opacity-50 group-focus:opacity-70" alt="DataOrbit 2025 Logo" />
+                <div class="mt-1 ml-3 text-xl font-black tracking-tight text-gray-100 transition-colors group-hover:text-gray-400/60">
+                    DataOrbit 2025</div>
             </a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" role="navigation" aria-expanded="false" aria-label="Main" aria-controls="menuItems">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -136,99 +136,131 @@
   <header class="mb-4 bg-primary-600">
     <span class="py-96">
       <h1 class="py-16 text-5xl font-black text-center text-white capitalize">
-        Prose
+        Tracks
       </h1>
     </span>
   </header>
-  <div class="max-w-4xl mx-auto mt-8 mb-2">
-    <div class="px-6">
-      
-      
-      
-      
-      
-      
-      <img src="/../assets/images/featured/featured-img-placeholder_hu7428047685820641061.webp" srcset=", /../assets/images/featured/featured-img-placeholder_hu5724850530618093813.webp 400w, /../assets/images/featured/featured-img-placeholder_hu10171595556708769091.webp 550w, /../assets/images/featured/featured-img-placeholder_hu6571692171377091256.webp 768w, /../assets/images/featured/featured-img-placeholder_hu7428047685820641061.webp 1100w"
-           class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
-           width="100%" alt="" />
-      
-      
-    </div>
-  </div>
-  
-  <div class="max-w-2xl px-6 pt-6 pb-16 mx-auto prose dark:prose-invert dark:text-white">
-    <h2 id="tailwindcsstypography">@tailwindcss/typography</h2>
-<p><a href="https://github.com/tailwindlabs/tailwindcss-typography">View on GitHub</a>!</p>
-<p>Beautiful typographic defaults for HTML you don&rsquo;t control.</p>
-<p>The official Tailwind CSS Typography plugin provides a set of prose classes you can use to add beautiful typographic defaults to any vanilla HTML you don’t control, like HTML rendered from Markdown, or pulled from a CMS.</p>
-<p>Tailwind CSS IntelliSense extension for Visual Studio Code</p>
-<pre tabindex="0"><code>&lt;article class=&#34;prose lg:prose-xl&#34;&gt;
-  {{ markdown }}
-&lt;/article&gt;
-</code></pre><p>To see what it looks like in action, check out our <a href="https://play.tailwindcss.com/uj1vGACRJA?layout=preview">live demo</a> on Tailwind Play.
-​</p>
-<h2 id="installation">Installation</h2>
-<h3 id="install-the-plugin-from-npm">Install the plugin from npm:</h3>
-<pre tabindex="0"><code>npm install -D @tailwindcss/typography
-</code></pre><p>Then add the plugin to your tailwind.config.js file: tailwind.config.js</p>
-<pre tabindex="0"><code>module.exports = {
-  theme: {
-    // ...
-  },
-  plugins: [
-    require(&#39;@tailwindcss/typography&#39;),
-    // ...
-  ],
-}
-</code></pre><h2 id="basic-usage">Basic usage</h2>
-<p>Now you can use the prose classes to add sensible typography styles to any vanilla HTML:</p>
-<pre tabindex="0"><code>&lt;article class=&#34;prose lg:prose-xl&#34;&gt;
-  &lt;h1&gt;Garlic bread with cheese: What the science tells us&lt;/h1&gt;
-  &lt;p&gt;
-    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-    children, with the food earning such an iconic status in our culture that kids will often dress
-    up as warm, cheesy loaf for Halloween.
-  &lt;/p&gt;
-  &lt;p&gt;
-    But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-    springing up around the country.
-  &lt;/p&gt;
-&lt;/article&gt;
-</code></pre><h2 id="choosing-a-gray-scale">Choosing a gray scale</h2>
-<p>This plugin includes a modifier class for each of the five gray scales Tailwind includes by default so you can easily style your content to match the grays you’re using in your project.</p>
-<pre tabindex="0"><code>&lt;article class=&#34;prose prose-slate&#34;&gt;
-  {{ markdown }}
-&lt;/article&gt;
-</code></pre><h2 id="here-are-the-classes-that-are-generated-using-a-totally-default-tailwind-css-v20-build">Here are the classes that are generated using a totally default Tailwind CSS v2.0 build:</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Class</th>
-          <th>Gray scale</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>prose-gray (default)</td>
-          <td>Gray</td>
-      </tr>
-      <tr>
-          <td>prose-slate</td>
-          <td>Slate</td>
-      </tr>
-      <tr>
-          <td>prose-zinc</td>
-          <td>Zinc</td>
-      </tr>
-      <tr>
-          <td>prose-neutral</td>
-          <td>Neutral</td>
-      </tr>
-      <tr>
-          <td>prose-stone</td>
-          <td>Stone</td>
-      </tr>
-  </tbody>
-</table>
 
+      
+      
+    <div class ="card-container">
+        <div class="card">
+            <h2 class="font-bold text-xl"><br>AI for Social Good</h2>
+            <p>Use artificial intelligence to address social and/or ethical challenges.</p>
+          </div>
+          
+          <div class="card">
+            <h2 class="font-bold text-xl"><br>Predictive Modeling</h2>
+            <p>Develop learning models to forecast trends, behaviors, or outcomes using data.</p>
+          </div>
+        
+          <div class="card">
+            <h2 class="font-bold text-xl"><br>Natural Language Processing</h2>
+            <p>Work with text and speech data to obtain sights, responses, or automate tasks.</p>
+          </div>
+        
+          <div class="card">
+            <h2 class="font-bold text-xl"><br>Data Visualization and Insights</h2>
+            <p>Transform your datasets into visually compelling stories that explain your insights.</p>
+          </div>
+        
+          <div class="card">
+            <h2 class="font-bold text-xl"><br>Best Use of Groq</h2>
+            <p>Utilize Groq's technology in your most interesting way.</p>
+          </div>
+        
+          <div class="card">
+            <h2 class="font-bold text-xl"><br>Sports Analytics</h2>
+            <p>Analyze sports-related performance, game strategories, and/or fan engagement using the data.</p>
+          </div>
+        </div>
+          <style>
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 20px;
+                padding: 20px;
+
+                width: 90vw;
+                margin: 0 auto;
+                justify-content: center;
+
+                }
+
+            .card {
+                background: linear-gradient(to right, #1e1739, #1c1733);
+                color: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                }
+
+            .card:hover {
+                transform: scale(1.15);
+                }
+
+            @media (max-width: 900px) {
+                .card-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                }
+
+            @media (max-width: 600px) {
+                .card-container {
+                    grid-template-columns: 1fr;
+                    
+                }
+                }
+
+
+
+          </style>
+      
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script src="/js/darkmode.js" defer></script>
+<footer class="bg-gray-900">
+    <div class="max-w-md px-4 py-10 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="flex justify-center mt-8 space-x-6">
+            
+            
+            
+            <a href="http://instagram.com/datascienceucsb" target="_blank" class="text-gray-400 hover:text-gray-300">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                          clip-rule="evenodd" />
+                </svg>
+            </a>
+            
+            
+            
+            <a href="https://github.com/data-science-ucsb" target="_blank" class="text-gray-400 hover:text-gray-300">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd" />
+                </svg>
+            </a>
+            
+        </div>
+        <p class="mt-8 text-base text-center text-gray-400">&copy; DataOrbit 2025. All rights
+            reserved.</p>
+        <p class="mt-2 text-base text-center text-gray-400">Made with &#x2764;&#xfe0f; by <a
+               ><span
+                      class="font-black" >Data Science UCSB</span></a>
+        </p>
+    </div>
+</footer>
+
+      
+
+  
 </html>
