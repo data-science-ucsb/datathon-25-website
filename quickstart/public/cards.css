@@ -1,0 +1,30 @@
+/* Modal Styling */
+.modal {
+    display: none;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-content {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-content button {
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
