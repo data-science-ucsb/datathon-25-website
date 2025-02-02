@@ -78,6 +78,10 @@
             <a id="devpost" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
                 DevPost
             </a>
+
+            <a id="agenda" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://localhost:1313/agenda/" title="Agenda">
+                Agenda
+            </a>
             
             <a id="tracks" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://localhost:1313/tracks/" title="Tracks">
                 Tracks
@@ -253,6 +257,7 @@
                     const sponsorcodes = document.getElementById('sponsorcodes');
                     const registerbutton = document.getElementById('register');
                     const submissiondropdown = document.getElementById('submission');
+                    const agenda = document.getElementById('agenda');
 
                     if (isAuthorized){
                         loginDropdown.style.display = 'none';
@@ -263,6 +268,7 @@
                         sponsorcodes.classList.remove('hidden');
                         registerbutton.classList.add('hidden');
                         submissiondropdown.classList.remove('hidden');
+                        agenda.classList.remove('hidden');
 
                     } else {
                         loginDropdown.style.display = 'block';
@@ -357,7 +363,7 @@
 
     
 
-    
+<!--     
     <div class="relative my-4">
         <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
             <div class="relative sm:py-8 lg:py-0">
@@ -372,55 +378,104 @@
                     </svg>
                 </div>
                 <div class="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
-                    <div class="overflow-hidden shadow-xl rounded-2xl">
+                    <div class="overflow-hidden rounded-2xl">
                         
                         
                         
-                        <img imgh src="/images/pages/our-mission_hu3141175969106461456.webp" width="1440" height="1440" class="w-full h-auto" alt="P1" loading="lazy" />
+                        
+                        <img imgh src="https://i.imgur.com/L2zgYqx.png" width="120" height="120" class="w-full h-auto" alt="P1" loading="lazy" />
                         
                         
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
                 <div class="md:pt-12 sm:pt-6 lg:pt-20">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
-                        Our Datathon
-                    </h2>
+                    
                     <div class="mt-6 text-gray-900 dark:text-white">
                         <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
                             
-                            <p class="text-lg text-gray-900 dark:text-white">
-                                Data Science UCSB is the premier data science club at UC Santa Barbara. Over an action-packed weekend, participants will collaborate, compete, and learn, developing projects that tackle real-world, open-ended challenges while diving into the latest advancements in data science, AI, and technology!    
-                            </p>
+                            
                             
                             <p class="text-lg text-gray-900 dark:text-white">
-                                We welcome students from all majors and backgrounds to join us for our highly anticipated Datathon, an exciting competition designed to challenge participants with real-world data problems.
                             </p>
                             
-                            <p class="text-lg text-gray-900 dark:text-white">
-                                Whether you're an experienced data scientist or just starting your journey, our Datathon is the perfect place to showcase your skills, learn from peers, and immerse yourself in the world of data!    
+                            <p class="text-lg text-gray-900 dark:text-white">    
                             </p>
                             
+                            <div id="fasttyper-box" class="border-2 border-gray-900 dark:border-white rounded-lg p-4 shadow-lg">
+                                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+                                    Our Datathon
+                                    
+                                </h2>
+                                <p id="fasttyper" class="text-lg text-gray-900 dark:text-white"></p>
+                            </div>
+
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    const text = `
+                                    Data Science UCSB is the premier data science club at UC Santa Barbara. Over an action-packed weekend, participants will collaborate, compete, and learn, developing projects that tackle real-world, open-ended challenges while diving into the latest advancements in data science, AI, and technology!  
+                                    
+                                    We welcome students from all majors and backgrounds to join us for our highly anticipated Datathon, an exciting competition designed to challenge participants with real-world data problems.  
+                                    
+                                    Whether you're an experienced data scientist or just starting your journey, our Datathon is the perfect place to showcase your skills, learn from peers, and immerse yourself in the world of data!`.split(""); 
+
+                                    const fasttyperElement = document.getElementById("fasttyper");
+                                    const speed = 0.5;
+                                    let i = 0;
+
+                                    function fasttyper() {
+                                        if (i < text.length) {
+                                            if (text[i] === "\n") {
+                                                fasttyperElement.innerHTML += "<br>";
+                                            } else {
+                                                fasttyperElement.innerHTML += text[i];
+                                            }
+                                            i++;
+                                            setTimeout(fasttyper, speed);
+                                        }
+                                    }
+
+                                    fasttyper();
+                                });
+                            </script>
+                            <style>
+                                #fasttyper::after {
+                                    content: "|";
+                                    animation: blink 0.8s infinite;
+                                }
+
+                                @keyframes blink {
+                                    50% {
+                                        opacity: 0;
+                                    }
+                                }
+                            </style>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
+<br>
+<br>
+<br>
+<br>
+
     <div class ="card-container">
         <div class="card">
 
             <h2 class="font-bold text-xl"><span class="text-3xl mr-2">🏆</span><br>
                 
-                Over $3,000 in prizes!</h2>
+                Over $3,000 in Prizes</h2>
             <p>Work on cutting-edge artificial intelligence projects with fellow students.</p>
         </div>
           
         <div class="card">
-            <h2 class="font-bold text-xl"><span class="text-3xl mr-2">🌎</span><br>Everyone is Welcome!</h2>
-            <p>All students from the United States are welcome to attend this 36-hour hackathon.</p>
+            <h2 class="font-bold text-xl"><span class="text-3xl mr-2">🌎</span><br>Everyone is Welcome</h2>
+            <p>All students from the United States are welcome to attend this 36-hour hackathon from February 22nd.</p>
         </div>
         
         <div class="card">
@@ -439,7 +494,7 @@
         </div>
         
         <div class="card">
-            <h2 class="font-bold text-xl"><span class="text-3xl mr-2">👥</span><br>Meet New friends!</h2>
+            <h2 class="font-bold text-xl"><span class="text-3xl mr-2">👥</span><br>Meet New Friends</h2>
             <p>Talk to people from all over the United States and meet your team.</p>
         </div>
 
@@ -458,7 +513,7 @@
                 }
 
             .card {
-                background: linear-gradient(to right, #1e1739, #1c1733);
+                background: #111827;
                 color: white;
                 padding: 20px;
                 border-radius: 12px;
@@ -493,12 +548,14 @@
 
     </div>
 
+    <br>
+    <br>
 
 
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
-        Thank you to our Judges!
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
+        Thank You to our Judges:
         
-    </h2> 
+    </h1> 
     <div class="judges-container">
         <div class="judge-box">
           <img class="judge-img" src="https://i.imgur.com/G8QhhHr.png" alt="teacher">
@@ -566,7 +623,7 @@
           padding: 20px;
         }
         .judge-box {
-            background: linear-gradient(to right, #1e1739, #1c1733);
+            background: #111827;
             opacity: 100;
             padding: 15px;
             border-radius: 8px;
@@ -607,35 +664,38 @@
         }
       </style>
     
+          <br>
+          <br>
+          <br>
+
     <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
-        Thank you to our Sponsors!
-        
-    </h2>       
-    
-    <div class ="card-container">
-        <div class="card">
+            We are sponsored by:
+            
+    </h2> 
+    <div class ="sponsor-container">
+        <div class="card1">
 
             <img src="https://i.imgur.com/TUkgz5h.png" class="card-image">
 
         </div>
           
-        <div class="card">
+        <div class="card1">
             <img src="https://i.imgur.com/5hanzo0.png" class="card-image">
         </div>
         
-        <div class="card">
+        <div class="card1">
             <img src="https://i.imgur.com/ZGT5jjU.png" class="card-image">
         </div>
         
-        <div class="card">
+        <div class="card1">
             <img src="https://i.imgur.com/efvxgbY.png" class="card-image">
         </div>
 
-        <div class="card">
+        <div class="card1">
             <img src="https://i.imgur.com/5Zlv7R5.png" class="card-image">
         </div>
 
-        <div class="card">
+        <div class="card1">
             <img src="https://i.imgur.com/ZOE7yLK.png" class="card-image">
         </div>
         
@@ -648,6 +708,35 @@
             object-fit: contain;
             object-position:center;
         }
+
+        .sponsor-container {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+            padding: 20px;
+
+            width: 90vw;
+            margin: 0 auto;
+            justify-content: center;
+
+                }
+
+        .card1 {
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 400px;
+            height:200px;
+            overflow:hidden;
+            transition: transform 0.3s ease-in-out;
+            align-items: center;
+            justify-content: center;
+            }
+        .card1:hover {
+            transform: scale(1.15);
+            }
     </style>
 
 
