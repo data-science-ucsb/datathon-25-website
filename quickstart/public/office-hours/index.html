@@ -12,22 +12,21 @@
 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-<title itemprop="name"> Tracks | DataOrbit 2025 
+<title itemprop="name"> Office Hours | DataOrbit 2025 
 </title>
-<meta name="description" content="Tailwind Typography @tailwindcss/typography &amp; Prose" />
-<meta property="og:title" content="Prose | DataOrbit 2025" />
-<meta name="twitter:title" content="Prose | DataOrbit 2025" />
-<meta itemprop="name" content="Prose | DataOrbit 2025" />
-<meta name="application-name" content="Prose | DataOrbit 2025" />
+<meta name="description" content="About Us" />
+<meta property="og:title" content="About | DataOrbit 2025" />
+<meta name="twitter:title" content="About | DataOrbit 2025" />
+<meta itemprop="name" content="About | DataOrbit 2025" />
+<meta name="application-name" content="About | DataOrbit 2025" />
 <meta property="og:description"
-      content="Tailwind Typography @tailwindcss/typography &amp; Prose" />
+      content="About Us" />
 <meta property="og:site_name" content="DataOrbit 2025" />
-<meta property="og:url" content="http://localhost:1313/tracks/" />
+<meta property="og:url" content="http://localhost:1313/office-hours/" />
 <meta property="og:locale" content="en">
 <meta property="og:image" content="/assets/images/featured/featured-img-placeholder.png" />
 <meta property="og:image:secure_url" content="http://localhost:1313/assets/images/featured/featured-img-placeholder.png" />
 <meta property="og:type" content="article" />
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -49,6 +48,7 @@
         document.documentElement.classList.remove('dark')
     }
 </script>
+
 
 
 
@@ -143,94 +143,78 @@
   <header class="mb-4 bg-primary-600">
     <span class="py-96">
       <h1 class="py-16 text-5xl font-black text-center text-white capitalize">
-        Tracks
+        Office Hours
       </h1>
     </span>
   </header>
+  <div class ="card-container">
+    <div class="card">
+                
+        <h1 class="font-bold text-center text-4xl">Zoom Links: </h1>
+        <p>Did the team use appropriate models, tools, etc. for the problem?</p>
+        
+      </div>
+    </div>
 
-      
-      
-    <div class ="card-container">
-        <div class="card">
-            <h2 class="font-bold text-xl"><br>AI for Social Good</h2>
-            <p>Use artificial intelligence to address social and/or ethical challenges.</p>
-          </div>
-          
-          <div class="card">
-            <h2 class="font-bold text-xl"><br>Predictive Modeling</h2>
-            <p>Develop learning models to forecast trends, behaviors, or outcomes using data.</p>
-          </div>
-        
-          <div class="card">
-            <h2 class="font-bold text-xl"><br>Natural Language Processing</h2>
-            <p>Work with text and speech data to obtain sights, responses, or automate tasks.</p>
-          </div>
-        
-          <div class="card">
-            <h2 class="font-bold text-xl"><br>Data Visualization and Insights</h2>
-            <p>Transform your datasets into visually compelling stories that explain your insights.</p>
-          </div>
-        
-          <div class="card">
-            <h2 class="font-bold text-xl"><br>Best Use of Groq</h2>
-            <p>Utilize Groq's technology in your most interesting way.</p>
-          </div>
-        
-          <div class="card">
-            <h2 class="font-bold text-xl"><br>Sports Analytics</h2>
-            <p>Analyze sports-related performance, game strategories, and/or fan engagement using the data.</p>
-          </div>
-        </div>
-          <style>
+      <style>
+        .card-container {
+            
+            gap: 20px;
+            padding: 20px;
+
+            width: 50vw;
+            margin: 0 auto;
+            justify-content: center;
+
+            }
+        ul {
+            margin: 10px 0;
+            padding-left: 30px;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .card {
+            background: linear-gradient(to right, #1e1739, #1c1733);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+
+        .card:hover {
+            transform: scale(1.05);
+            }
+
+        @media (max-width: 900px) {
             .card-container {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, auto);
-                gap: 20px;
-                padding: 20px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            }
 
-                width: 90vw;
-                margin: 0 auto;
-                justify-content: center;
-
-                }
-
-            .card {
-                background: linear-gradient(to right, #1e1739, #1c1733);
-                color: white;
-                padding: 20px;
-                border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-                transition: transform 0.3s ease-in-out;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                }
-
-            .card:hover {
-                transform: scale(1.15);
-                }
-
-            @media (max-width: 900px) {
-                .card-container {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-                }
-
-            @media (max-width: 600px) {
-                .card-container {
-                    grid-template-columns: 1fr;
-                    
-                }
-                }
+        @media (max-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            }
 
 
 
-          </style>
+      </style>
       
+    
+</article>
+
+    
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <script src="/js/darkmode.js" defer></script>
+
 <footer class="bg-gray-900">
     <div class="max-w-md px-4 py-10 mx-auto overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <div class="flex justify-center mt-8 space-x-6">
@@ -266,8 +250,6 @@
         </p>
     </div>
 </footer>
+</body>
 
-      
-
-  
 </html>
