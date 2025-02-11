@@ -18,13 +18,11 @@
 <title itemprop="name"> DataOrbit 2025
     
 </title>
-<meta name="description" content="A Hugo theme built with love, using TailwindCSS 3, Alpine.JS, and Hugo Pipes. Images are optimized for use with Hugo Pipes for WebP format." />
-<meta property="og:title" content="DataOrbit 2025 | DataOrbit 2025" />
-<meta name="twitter:title" content="DataOrbit 2025 | DataOrbit 2025" />
-<meta itemprop="name" content="DataOrbit 2025 | DataOrbit 2025" />
-<meta name="application-name" content="DataOrbit 2025 | DataOrbit 2025" />
-<meta property="og:description"
-      content="A Hugo theme built with love, using TailwindCSS 3, Alpine.JS, and Hugo Pipes. Images are optimized for use with Hugo Pipes for WebP format." />
+<meta property="og:title" content="DataOrbit 2025" />
+<meta name="twitter:title" content="DataOrbit 2025" />
+<meta itemprop="name" content="DataOrbit 2025" />
+<meta name="application-name" content="DataOrbit 2025" />
+
 <meta property="og:site_name" content="DataOrbit 2025" />
 <meta property="og:url" content="https://dataorbit.info/" />
 <meta property="og:locale" content="en">
@@ -44,12 +42,9 @@
 
 <script>
 
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('color-theme', 'dark');
     
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
 </script>
 
 <style>
