@@ -76,9 +76,7 @@
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
             
             
-            <a id="devpost" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
-                DevPost
-            </a>
+            
             
             <a id="agenda" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/agenda/" title="Agenda">
                 Agenda
@@ -106,6 +104,10 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                     <div class="px-2 py-2 bg-white rounded-md shadow text-primary-900">
                         
+                        <a id="devpost" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
+                            DevPost
+                        </a>
+
                         <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://localhost:1313/judging-criteria">Judging Criteria</a>
                         
                         <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://localhost:1313/project-requirements/">Project Requirements</a>
@@ -119,9 +121,9 @@
             
             
             
-            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/sponsor-codes/" title="Sponsor Codes">
+            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/resources/" title="Resources">
 
-                Sponsor Codes
+                Resources
             </a>
             
             <a id="register" href="https://tinyurl.com/dataorbit25-reg" target="_blank" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg bg-purple-200 md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus:shadow-outline hidden" style="background-color: blueviolet;">
@@ -149,45 +151,61 @@
     </span>
   </header>
 
-   
+
+<div class="notes">
+                    
+    <h2 class="font-bold">**IMPORTANT NOTE**:</h2>
+    <ul>
+        <li>The venue closes on <b>Saturday at 12AM</b> and opens again on <b>Sunday at 8AM</b>. We recommend that they make use of the school’s library during overnight hours, or off-campus spaces, like Slodoco (a 24 hr donut shop)</li>
+        <li>Projects are due at <b>5PM on Sunday</b> and <u>late submissions will not be accepted.</u></li>
+        <li>You Hacker Badge is your ticket to grabbing your meals! Make sure to have it on you for the duration of the event.</li>
+    
+    </ul>
+</div>
 
 
+
+  
 <div class ="agenda-container">
-<div class="agenda">
-                
-    <h2 class="font-bold">Day 1:</h2>
-    <ul>
-        <li>8:30 to 9AM – Sign in </li>
-        <li>9 to 9:30AM – Kickoff</li>
-        <li>9:30 to 12PM – Group sign ups</li>
-        <li>10 to 11AM – Group formation social</li>
-        <li>12PM – Pass out lunch</li>
-        <li>2 to 3PM – Exploratory Data Analysis Workshop</li>
-        <li>3 to 5PM – Tech Dev, Sponsor office hours</li>
-        <li>5 to 6PM – Resume Workshop</li>
-        <li>6PM – Pass out dinner</li>
-        <li>7 to 8PM – Survey of Models Workshop</li>
-        <li>8 to 9PM – Presentation/public speaking workshop</li>
-        <li>9 to 10PM – Silent Disco</li>
-    </ul>
-</div>
-<div class="agenda">
-                
-    <h2 class="font-bold">Day 2:</h2>
-    <ul>
-        <li>9am – Pass out breakfast</li>
-        <li>11am to 12pm: Computer Vision Workshop</li>
-        <li>12pm: Pass out lunch</li>
-        <li>12pm to 4pm: Tech dev, professor, and sponsor office hours</li>
-        <li>5pm: Projects due</li>
-        <li>5 to 8pm: Judging</li>
-        <li>5 to 6pm: Painting Activity</li>
-        <li>6pm: Pass out dinner</li>
-        <li>8 to 9pm: Final results + closing ceremony</li>
+    
+    
+    <div class="agenda">
+                    
+        <h2 class="font-bold">Day 1:</h2>
+        <ul>
+            <li><b>8:30 to 9am</b> – Sign in</li>
+            <li><b>9 to 9:30am</b> – Kickoff</li>
+            <li><b>9:30 to 12pm</b> – Group sign ups</li>
+            <li><b>10 to 11am</b> – Group formation social</li>
+            <li><b>12pm</b> – Lunch</li>
+            <li><b>2 to 3pm </b>– Exploratory Data Analysis Workshop</li>
+            <li><b>3 to 5pm </b>– Sponsor office hours</li>
+            <li><b>5 to 6pm </b>– Resume Workshop</li>
+            <li><b>6pm </b>– Dinner</li>
+            <li><b>7 to 8pm</b> – Survey of Models Workshop</li>
+            <li><b>8 to 9pm </b>– Public Speaking/Presentation Workshop</li>
+            <li><b>9 to 10pm </b>– Silent Disco</li>
+            <li><b>12am</b> – Venue Closes (relocate to open areas on campus)</li>
+        </ul>
+    </div>
+    <div class="agenda">
+                    
+        <h2 class="font-bold">Day 2:</h2>
+        <ul>
+            <li><b>8am</b> – Venue Opens</li>
+            <li><b>9am </b>– Breakfast</li>
+            <li><b>11am to 12pm</b> – Computer Vision Workshop</li>
+            <li><b>12pm </b>– Lunch</li>
+            <li><b>12pm to 4pm </b>– Tech dev, professor, and sponsor office hours</li>
+            <li><b>5pm</b> – <a href="https://dataorbit-2025.devpost.com/" target="_blank" style="color: blue"><u>Projects Due</u></a></li>
+            <li><b>5 to 8pm </b>– Judging</li>
+            <li><b>5 to 6pm</b> – Painting Activity</li>
+            <li><b>6pm </b>– Dinner</li>
+            <li><b>8 to 9pm </b>– Final results + closing ceremony</li>
 
-    </ul>
+        </ul>
 
-</div>
+    </div>
 </div>
 <style>
 .agenda-container{
@@ -201,7 +219,7 @@
     justify-content: center;
 }
 .agenda {
-    background: linear-gradient(to right, #1e1739, #1c1733);
+    background: #111827;
     color: white;
     padding: 20px;
     border-radius: 12px;
@@ -210,6 +228,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    }
+
+.notes {
+    background: #111827;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+
     }
 
 .agenda:hover {
