@@ -643,10 +643,14 @@
           </style>
 
     </div>
-
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center hidden-element logged-in">
-        Our Datathon Prizes:
-    </h1> 
+    <div class="solo-container hidden-element">
+        <div class="solo">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl text-center hidden-element logged-in">
+                Our Datathon Prizes:
+            </h1> 
+        </div>
+    </div>
+    
     
     <div class ="prize-container hidden-element">
         <div class="prize1 logged-in">
@@ -775,10 +779,63 @@
     <div class="hidden-element">
 
     
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
-            Thank You to our Judges:
-            
-        </h1> 
+        
+        <div class ="solo-container">
+            <div class="solo">
+                        
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl text-center">
+                    Thank You to our Judges:
+                    
+                </h1> 
+               
+              </div>
+            </div>
+        
+              <style>
+                .solo-container {
+                    
+                    gap: 20px;
+                    padding: 20px;
+        
+                    width: 50vw;
+                    margin: 0 auto;
+                    justify-content: center;
+        
+                    }
+                
+                .solo {
+                    background: #111827;
+                    color: white;
+                    padding: 20px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    transition: transform 0.3s ease-in-out;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    }
+        
+                .solo:hover {
+                    transform: scale(1.05);
+                    }
+        
+                @media (max-width: 900px) {
+                    .solo-container {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    }
+        
+                @media (max-width: 600px) {
+                    .solo-container {
+                        grid-template-columns: 1fr;
+                    }
+                    }
+        
+        
+        
+              </style>
+
+
         <div class="judges-container">
             <div class="judge-box">
             <img class="judge-img" src="https://i.imgur.com/G8QhhHr.png" alt="teacher">
@@ -920,10 +977,14 @@
           <br>
           <br>
     <div class="hidden-element">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
-                We are sponsored by:
-                
-        </h2> 
+        <div class="solo-container">
+            <div class="solo">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl text-center">
+                    We are sponsored by:
+                    </h2>
+            </div>
+        </div>
+         
         <div class ="sponsor-container">
             <div class="card1">
 
@@ -1002,10 +1063,14 @@
 
 
 <div class="hidden-element">
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
-            Our Organizers:
-            
-    </h2> 
+    <div class="solo-container">
+        <div class="solo">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl text-center">
+                Our Organizers:
+                </h2>
+        </div>
+    </div>
+     
     <div class ="sponsor-container">
         <div class="card1">
 
