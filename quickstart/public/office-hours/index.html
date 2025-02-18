@@ -75,9 +75,6 @@
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
             
             
-            <a id="devpost" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
-                DevPost
-            </a>
 
             <a id="agenda" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/agenda/" title="Agenda">
                 Agenda
@@ -105,7 +102,11 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                     <div class="px-2 py-2 bg-white rounded-md shadow text-primary-900">
                         
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/judging-criteria">Judging Criteria</a>
+                        <a id="devpost" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
+                            DevPost
+                        </a>
+
+                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://localhost:1313/judging-criteria">Judging Criteria</a>
                         
                         <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/project-requirements/">Project Requirements</a>
                         
@@ -118,9 +119,9 @@
             
             
             
-            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/sponsor-codes/" title="Sponsor Codes">
+            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/resources/" title="Resources">
 
-                Sponsor Codes
+                Resources
             </a>
             
             <a id="register" href="https://tinyurl.com/dataorbit25-reg" target="_blank" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg bg-purple-200 md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus:shadow-outline hidden" style="background-color: blueviolet;">
@@ -148,64 +149,81 @@
     </span>
   </header>
   <div class ="card-container">
+    
+      
     <div class="card">
-                
-        <h1 class="font-bold text-center text-4xl">Zoom Links: </h1>
-        <p>Did the team use appropriate models, tools, etc. for the problem?</p>
-        
-      </div>
+      <h2 class="font-bold text-xl"><br>Data Science UCSB Technical Development Officers</h2>
+      <p>Saturday 3pm-5pm and Sunday 12pm-4pm</p>
+      <p>- In person at De Anza.</p>
+      <p>- Online over <a href="https://ucsb.zoom.us/j/89697502964?pwd=aebBKZSBWp0iyIysZpqiHaknYxIvmz.1" target="_blank" style="color: blue;"><u>Zoom</u></a>.<br>- Meeting ID: 896 9750 2964<br>- Passcode: 582531</p>
+    </div>
+  
+    <div class="card">
+      <h2 class="font-bold text-xl"><br>ACM Officers</h2>
+      <p>- In person at De Anza.</p>
+      <p>Aman: Saturday 3pm-5pm</p>
+      <p>Deniz: Sunday 12pm-4pm</p>
+    </div>
+  
+    <div class="card">
+      <h2 class="font-bold text-xl"><br>SingleStore</h2>
+      <p>Sunday 1am-10am</p>
+      <p>- SingleStore <a href="https://discord.gg/qyWGqnyd6y" target="_blank" style="color: blue;"><u>Discord</u></a></p>
     </div>
 
-      <style>
-        .card-container {
-            
-            gap: 20px;
-            padding: 20px;
-
-            width: 50vw;
-            margin: 0 auto;
-            justify-content: center;
-
-            }
-        ul {
-            margin: 10px 0;
-            padding-left: 30px;
-            list-style-type: disc;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .card {
-            background: linear-gradient(to right, #1e1739, #1c1733);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            }
-
-        .card:hover {
-            transform: scale(1.05);
-            }
-
-        @media (max-width: 900px) {
-            .card-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            }
-
-        @media (max-width: 600px) {
-            .card-container {
-                grid-template-columns: 1fr;
-            }
-            }
+    <div class="card">
+        <h2 class="font-bold text-xl"><br>UCSB Professors</h2>
+        <p>Professor Coburn: Saturday 3pm-5pm</p>
+        <p>Professor Ichiba: Sunday 2pm-4pm</p>
+        <p>- Online over <a href="https://ucsb.zoom.us/j/89697502964?pwd=aebBKZSBWp0iyIysZpqiHaknYxIvmz.1" target="_blank" style="color: blue;"><u>Zoom</u></a>.<br>- Meeting ID: 896 9750 2964<br>- Passcode: 582531</p>
+      </div>
 
 
+    <style>
+      .card-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, auto);
+          gap: 20px;
+          padding: 20px;
 
-      </style>
+          width: 90vw;
+          margin: 0 auto;
+          justify-content: center;
+
+          }
+
+      .card {
+          background: #111827;
+          color: white;
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease-in-out;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          }
+
+      .card:hover {
+          transform: scale(1.15);
+          }
+
+      @media (max-width: 900px) {
+          .card-container {
+              grid-template-columns: repeat(2, 1fr); 
+          }
+          }
+
+      @media (max-width: 600px) {
+          .card-container {
+              grid-template-columns: 1fr;
+          }
+          }
+
+
+
+    </style>
       
     
 </article>

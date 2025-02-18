@@ -40,11 +40,29 @@
     }
 </style>
 
+
 <script>
 
     document.documentElement.classList.add('dark');
     localStorage.setItem('color-theme', 'dark');
     
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (localStorage.getItem("authorized") === "true") {
+            updatePageForLogin();
+        }
+        else{
+            document.querySelectorAll("[class*='guest']").forEach(el => el.style.display = "block");
+            document.querySelectorAll("[class*='logged-in']").forEach(el => el.style.display = "none");
+        }
+    });
+
+    function updatePageForLogin() {
+        document.querySelectorAll("[class*='guest']").forEach(el => el.style.display = "none");
+        document.querySelectorAll("[class*='logged-in']").forEach(el => el.style.display = "block");
+    }
 </script>
 
 <style>
@@ -112,15 +130,14 @@
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
             
             
-            <a id="devpost" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
-                DevPost
-            </a>
+            
 
             <a id="agenda" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://dataorbit.info/agenda/" title="Agenda">
                 Agenda
             </a>
 
-            <a id="office-hours" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://dataorbit.info/office-hours/" title="Office Hours">
+
+            <a id="office-hours" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://localhost:1313/office-hours/" title="Office Hours">
                 Office Hours
             </a>
             
@@ -142,7 +159,11 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                     <div class="px-2 py-2 bg-white rounded-md shadow text-primary-900">
                         
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/judging-criteria">Judging Criteria</a>
+                        <a id="devpost" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
+                            DevPost
+                        </a>
+
+                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://localhost:1313/judging-criteria">Judging Criteria</a>
                         
                         <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/project-requirements/">Project Requirements</a>
                         
@@ -155,9 +176,9 @@
             
             
             
-            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://dataorbit.info/sponsor-codes/" title="Sponsor Codes">
+            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline hidden" href="http://localhost:1313/resources/" title="Resources">
 
-                Sponsor Codes
+                Resources
             </a>
             
             <a id="register" href="https://tinyurl.com/dataorbit25-reg" target="_blank" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg bg-purple-200 md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus:shadow-outline" style="background-color: blueviolet;">
@@ -269,6 +290,7 @@
                     if (validCombo[email] && validCombo[email] === password) {
                         alert('login success');
                         localStorage.setItem('authorized', 'true');
+                        location.reload()
                         
                         
                         updatelogin();
@@ -312,6 +334,7 @@
                         submissiondropdown.classList.remove('hidden');
                         agenda.classList.remove('hidden');
                         officehours.classList.remove('hidden');
+ 
 
                     } else {
                         loginDropdown.style.display = 'block';
@@ -390,17 +413,45 @@
 
                     
                     
-                    <img src="https://i.imgur.com/5DT2ndi.png" alt="Italian Trulli" class="cards transition w-full max-w-xl mx-auto rounded-lg">
+                    <img src="https://i.imgur.com/5DT2ndi.png" alt="Italian Trulli" class="cardstitle transition w-full max-w-xl mx-auto rounded-lg">
                     <style>
-                        .cards:hover {
+                        .cardstitle:hover {
                             transform: scale(1.05);
                             transition: transform 0.3s ease-in-out;
+
                         }
+
+                        
                     </style>
                     <!-- <img srcset="/images/pages/tailbliss-rocket-indigo_hu10819992656674725709.webp 400w, /images/pages/tailbliss-rocket-indigo_hu554386879576073445.webp 576w" src="/images/pages/tailbliss-rocket-indigo.png" width="100%" height="" alt="TailBliss Hero" class="w-full max-w-xl mx-auto rounded-lg" /> -->
                 </div>
+
+                
             </div>
+            
         </div>
+        <div class="image_container">
+            <a href="https://discord.gg/52Ds3Pqt6p" target="_blank" class="logged-in"><img src="https://i.imgur.com/HFpIpVT.png" alt="Italian Trulli" class="cardsdiscord transition"></a>
+        </div>
+        
+        <style>
+            .cardsdiscord:hover {
+                transform: scale(1.05);
+                transition: transform 0.3s ease-in-out;
+
+            }
+
+            .cardsdiscord {
+                max-width: 300px; 
+                height: auto; 
+                
+            }
+            .image_container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
     </div>
 
     
@@ -445,7 +496,7 @@
                             <p class="text-lg text-gray-900 dark:text-white">    
                             </p>
                             
-                                <div id="fasttyper-box" class="border-2 border-gray-900 dark:border-white rounded-lg p-4 shadow-lg">
+                                <div id="fasttyper-box" class="border-2 border-gray-900 dark:border-white rounded-lg p-4 shadow-lg guest"> 
                                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
                                         Our Datathon
                                         
@@ -510,7 +561,7 @@
 <br>
 
     <div class ="card-container hidden-element">
-        <div class="card">
+        <div class="card guest">
 
             <h2 class="font-bold text-xl"><span class="text-3xl mr-2">🏆</span><br>
                 
@@ -518,27 +569,27 @@
             <p>Work on cutting-edge artificial intelligence projects with fellow students.</p>
         </div>
           
-        <div class="card">
+        <div class="card guest">
             <h2 class="font-bold text-xl"><span class="text-3xl mr-2">🌎</span><br>Everyone is Welcome</h2>
             <p>All students from the United States are welcome to attend this 36-hour hackathon from February 22nd.</p>
         </div>
         
-        <div class="card">
+        <div class="card guest">
             <h2 class="font-bold text-xl"><span class="text-3xl mr-2">🧠</span><br>Gain Knowledge</h2>
             <p>We are hosting multiple workshops through the weekend including Computer Vision, Data Analysis, and more!</p>
         </div>
         
-        <div class="card">
+        <div class="card guest">
             <h2 class="font-bold text-xl"><span class="text-3xl mr-2">✉️</span><br>Create Your Project</h2>
             <p>Develop and diversify your skills in the realm of data by creating an impactful solution powered by data! </p>
         </div>
         
-        <div class="card">
+        <div class="card guest">
             <h2 class="font-bold text-xl"><span class="text-3xl mr-2">👔</span><br>Career Opportunities</h2>
             <p>Connect with our judges, ranging from industry professionals to executive leaders.</p>
         </div>
         
-        <div class="card">
+        <div class="card guest">
             <h2 class="font-bold text-xl"><span class="text-3xl mr-2">👥</span><br>Meet New Friends</h2>
             <p>Talk to people from all over the United States and meet your team.</p>
         </div>
@@ -593,6 +644,131 @@
 
     </div>
 
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center hidden-element logged-in">
+        Our Datathon Prizes:
+    </h1> 
+    
+    <div class ="prize-container hidden-element">
+        <div class="prize1 logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🏆</span><br>Best Overall <b>($1000)</b>:</h2>
+            <p>Awarded to the best project.</p>
+        </div>
+          
+        <div class="prize1 logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🥈</span><br>Runner Up <b>($300)</b>:</h2>
+            <p>Awarded to the second place project.</p>
+        </div>
+        
+        <div class="prize1 logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🌍</span><br>Social Good Award <b>($500)</b>:</h2>
+            <p>Awarded to the winner of the AI for Social Good Track.</p>
+        </div>
+        
+        <div class="prize1 logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">📊</span><br>Predictive Modeling Award <b>($500)</b>:</h2>
+            <p> Awarded to the winner of the Predictive Modeling Track.</p>
+        </div>
+        
+        <div class="prize1 logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🗣️</span><br>Natural Language Processing Award <b>($500)</b>:</h2>
+            <p>Awarded to the winner of the Natural Language Processing Track.</p>
+        </div>
+        
+        <div class="prize logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">📈</span><br>Data Visualization and Insights Award <b>($500)</b>:</h2>
+            <p>Awarded to the winner of the Data Visualization and Insights Track.</p>
+        </div>
+
+        <div class="prize logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🤖</span><br>Best Use of Groq <b>($500 in Groq Store Credit)</b>:</h2>
+            <p>Awarded to the project that best demonstrates innovative and effective integration of GROQ technology, delivering breakthrough performance and novel solutions that push the boundaries of AI and data science.</p>
+        </div>
+
+        <div class="prize logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🏈</span><br>Sports Analytics Award <b>($200)</b>:</h2>
+            <p>Awarded to the project that most creatively harnesses data science to unlock breakthrough insights and drive transformative strategies and predictions in sports performance and team dynamics.</p>
+        </div>
+
+        <div class="prize logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🐍</span><br>Slither.io Star Commander <b>($20 Caje Gift Card)</b>:</h2>
+            <p>Awarded to the highest Slither.io Score. <a href="https://forms.gle/39bcvP1Qu3XPAbS69" target="_blank"><b>Submission Link</b></a></p>
+        </div>
+
+        <div class="prize logged-in">
+            <h2 class="text-xl"><span class="text-3xl mr-2">🎧</span><br>Silent Disco Star <b>($20 Caje Gift Card)</b>:</h2>
+            <p>Most epic dancer at the Silent Disco event!</p>
+        </div>
+
+          <style>
+            .prize-container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 20px;
+                padding: 20px;
+
+                width: 90vw;
+                margin: 0 auto;
+                justify-content: center;
+
+                }
+
+            .prize {
+                background: #111827;
+                color: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                max-width: 400px;
+                height:350px;
+                overflow:hidden;
+                transition: transform 0.3s ease-in-out;
+                align-items: center;
+                justify-content: center;
+                }
+            
+            .prize1 {
+                background: #111827;
+                color: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                max-width: 400px;
+                height:220px;
+                overflow:hidden;
+                transition: transform 0.3s ease-in-out;
+                align-items: center;
+                justify-content: center;
+                }
+
+            .prize:hover {
+                transform: scale(1.05);
+                }
+
+            
+            .prize1:hover {
+                transform: scale(1.05);
+                }
+
+            @media (max-width: 900px) {
+                .prize-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                }
+
+            @media (max-width: 600px) {
+                .prize-container {
+                    grid-template-columns: 1fr;
+                }
+                }
+
+
+
+          </style>
+
+    </div>
+
+
     <br>
     <br>
 
@@ -613,7 +789,7 @@
             <div class="judge-box">
                 <img class="judge-img" src="https://i.imgur.com/otJM6zG.png" alt="teacher">
                 <h3 class="judge-name">Alex Peng</h3>
-                <p class="judge-title">Growth Engineer @ PyTorch</p>
+                <p class="judge-title">Growth Engineer @ SingleStore</p>
                 </div>
             
             <div class="judge-box">
@@ -623,9 +799,21 @@
                 </div>
 
             <div class="judge-box">
-                <img class="judge-img" src="https://i.imgur.com/rJn5eeg.png" alt="teacher">
+                <img class="judge-img" src="https://i.imgur.com/vDS4pbY.jpeg" alt="teacher">
+                <h3 class="judge-name">Pratik Karki</h3>
+                <p class="judge-title">Co-Founder & CTO @ Pacific Life</p>
+            </div>
+
+            <div class="judge-box">
+                <img class="judge-img" src="https://i.imgur.com/B9cTIzp.jpeg" alt="teacher">
                 <h3 class="judge-name">Kara Godshalk</h3>
                 <p class="judge-title">Director of Customer Insights @ Pacific Life</p>
+            </div>
+
+            <div class="judge-box">
+                <img class="judge-img" src="https://i.imgur.com/WkqEebH.jpeg" alt="teacher">
+                <h3 class="judge-name">Aditya Kartikeya</h3>
+                <p class="judge-title">Technical Staff @ Oracle</p>
             </div>
 
             <div class="judge-box">
@@ -655,7 +843,7 @@
             </div>
 
             <div class="judge-box">
-                <img class="judge-img" src="https://i.imgur.com/rJn5eeg.png" alt="teacher">
+                <img class="judge-img" src="https://i.imgur.com/Gx0Ice0.jpeg" alt="teacher">
                 <h3 class="judge-name">Cathleen M. Coburn</h3>
                 <p class="judge-title">Professor @ UCSB</p>
             </div>
@@ -663,6 +851,12 @@
             <div class="judge-box">
                 <img class="judge-img" src="https://i.imgur.com/rJn5eeg.png" alt="teacher">
                 <h3 class="judge-name">Uma Ravat</h3>
+                <p class="judge-title">Professor @ UCSB</p>
+            </div>
+
+            <div class="judge-box">
+                <img class="judge-img" src="https://i.imgur.com/DQwfsFO.jpeg" alt="teacher">
+                <h3 class="judge-name">Andrew Carter</h3>
                 <p class="judge-title">Professor @ UCSB</p>
             </div>
 
@@ -674,7 +868,7 @@
         .judges-container {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: repeat(2, auto);
+          grid-template-rows: repeat(3, auto);
           gap: 20px;
           max-width: 1000px;
           margin: auto;
@@ -733,28 +927,32 @@
         <div class ="sponsor-container">
             <div class="card1">
 
-                <img src="https://i.imgur.com/TUkgz5h.png" class="card-image">
+                <a href = "https://www.redbull.com/us-en" target="_blank"><img src="https://i.imgur.com/TUkgz5h.png" class="card-image"></a>
 
             </div>
             
             <div class="card1">
-                <img src="https://i.imgur.com/5hanzo0.png" class="card-image">
+                <a href="https://pytorch.org/" target="_blank"><img src="https://i.imgur.com/5hanzo0.png" class="card-image"></a>
             </div>
             
             <div class="card1">
-                <img src="https://i.imgur.com/ZGT5jjU.png" class="card-image">
+                <a href="http://singlestore.com/" target="_blank"><img src="https://i.imgur.com/ZGT5jjU.png" class="card-image"></a>
             </div>
             
             <div class="card1">
-                <img src="https://i.imgur.com/xEBmcrv.jpeg" class="card-image">
+                <a href="https://groq.com/" target="_blank"><img src="https://i.imgur.com/xEBmcrv.jpeg" class="card-image"></a>
             </div>
 
             <div class="card1">
-                <img src="https://i.imgur.com/5Zlv7R5.png" class="card-image">
+                <a href="https://balsamiq.com/" target="_blank"><img src="https://i.imgur.com/5Zlv7R5.png" class="card-image"></a>
             </div>
 
             <div class="card1">
-                <img src="https://i.imgur.com/ZOE7yLK.png" class="card-image">
+                <a href="https://caje.coffee/" target="_blank"><img src="https://i.imgur.com/ZOE7yLK.png" class="card-image"></a>
+            </div>
+
+            <div class="card1">
+                <a href="https://asfb.as.ucsb.edu/" target="_blank"><img src="https://i.imgur.com/gEa8xvx.png" class="card-image"></a>
             </div>
             
         </div>
@@ -772,7 +970,7 @@
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, auto);
+            grid-template-rows: repeat(3, auto);
             gap: 20px;
             padding: 20px;
 
@@ -786,7 +984,7 @@
             color: white;
             padding: 20px;
             border-radius: 12px;
-            max-width: 400px;
+            max-width: 600px;
             height:200px;
             overflow:hidden;
             transition: transform 0.3s ease-in-out;
@@ -796,7 +994,77 @@
         .card1:hover {
             transform: scale(1.15);
             }
+        .card1:nth-child(7) {
+            grid-column: 2 / 3; /* Place the 7th sponsor in the center column */
+            justify-self: center; /* Center horizontally */
+            }
     </style>
+
+
+<div class="hidden-element">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
+            Our Organizers:
+            
+    </h2> 
+    <div class ="sponsor-container">
+        <div class="card1">
+
+            <a href = "https://www.datascienceucsb.org/" target="_blank"><img src="https://i.imgur.com/t3dU6qF.png" class="card-image"></a>
+
+        </div>
+        
+        <div class="card1">
+            <a href="https://www.ucsbacm.com/" target="_blank"><img src="https://i.imgur.com/MuEO0AD.png" class="card-image"></a>
+        </div>
+        
+        <div class="card1">
+            <a href="https://linktr.ee/gauchosportsanalytics" target="_blank"><img src="https://i.imgur.com/r64YSqh.png" class="card-image"></a>
+        </div>
+        
+        
+        
+    </div>
+</div>
+<style>
+    .card-image{
+        width:100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+        object-position:center;
+    }
+
+    .sponsor-container {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, auto);
+        gap: 20px;
+        padding: 20px;
+
+        width: 90vw;
+        margin: 0 auto;
+        justify-content: center;
+
+            }
+
+    .card1 {
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        max-width: 400px;
+        height:200px;
+        overflow:hidden;
+        transition: transform 0.3s ease-in-out;
+        align-items: center;
+        justify-content: center;
+        }
+    .card1:hover {
+        transform: scale(1.15);
+        }
+</style>
+
+
 
 
     <div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12">

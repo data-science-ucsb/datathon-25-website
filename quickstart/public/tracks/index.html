@@ -75,9 +75,6 @@
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
             
             
-            <a id="devpost" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
-                DevPost
-            </a>
 
             <a id="agenda" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/agenda/" title="Agenda">
                 Agenda
@@ -105,7 +102,11 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                     <div class="px-2 py-2 bg-white rounded-md shadow text-primary-900">
                         
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/judging-criteria">Judging Criteria</a>
+                        <a id="devpost" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
+                            DevPost
+                        </a>
+
+                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://localhost:1313/judging-criteria">Judging Criteria</a>
                         
                         <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/project-requirements/">Project Requirements</a>
                         
@@ -118,9 +119,9 @@
             
             
             
-            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/sponsor-codes/" title="Sponsor Codes">
+            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/resources/" title="Resources">
 
-                Sponsor Codes
+                Resources
             </a>
             
             <a id="register" href="https://tinyurl.com/dataorbit25-reg" target="_blank" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg bg-purple-200 md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus:shadow-outline hidden" style="background-color: blueviolet;">
@@ -149,42 +150,45 @@
   </header>
 
       
-      
+<div class="notes">
+                    
+    <h2 class="font-bold">**IMPORTANT NOTE**:</h2>
+    <ul>
+        <li>Even if your project falls under multiple tracks, each project can only be submitted to <u>one of the four main tracks</u>.</li>
+    
+    </ul>
+</div>
+
     <div class ="card-container">
         <div class="card">
-            <h2 class="font-bold text-xl"><br>AI for Social Good</h2>
-            <p>Use artificial intelligence to address social and/or ethical challenges.</p>
+            <h2 class="font-bold text-xl"><br>AI for Social Good 🌍</h2>
+            <p>The AI for Social Good track empowers participants to harness artificial intelligence techniques to tackle pressing societal challenges. This track invites innovators to explore creative, data-driven solutions that address issues ranging from climate change and public health to education and community safety. By leveraging tools like machine learning, natural language processing, and computer vision, participants are encouraged to design projects that not only analyze complex datasets but also generate actionable insights with tangible social impact. Emphasizing AI practices and interdisciplinary collaboration, the track creates a platform where technology meets social innovation, inspiring participants to drive transformative change and build a more equitable, sustainable future.</p>
           </div>
           
           <div class="card">
-            <h2 class="font-bold text-xl"><br>Predictive Modeling</h2>
-            <p>Develop learning models to forecast trends, behaviors, or outcomes using data.</p>
+            <h2 class="font-bold text-xl"><br>Predictive Modeling 📊</h2>
+            <p>The Predictive Modeling track challenges participants to harness the power of data and advanced analytics to forecast outcomes and trends. Competitors will dive deep into complex datasets, employing techniques such as machine learning, statistical analysis, time series, and deep learning to build models that predict real-world phenomena—ranging from market behavior and consumer trends to environmental changes and public health crises. This track is designed for those who are passionate about turning raw data into actionable insights, emphasizing not only the accuracy and robustness of predictive models but also their interpretability and real-world applicability. With an environment that fosters innovation and rigorous testing, participants are encouraged to push the boundaries of traditional analytics and showcase solutions that can inform strategic decision-making and drive impactful change.            </p>
           </div>
         
           <div class="card">
-            <h2 class="font-bold text-xl"><br>Natural Language Processing</h2>
-            <p>Work with text and speech data to obtain sights, responses, or automate tasks.</p>
+            <h2 class="font-bold text-xl"><br>Natural Language Processing 🗣️</h2>
+            <p>The NLP track invites participants to delve into the fascinating world of language understanding and generation, leveraging the latest advancements in natural language processing. This track emphasizes innovative approaches that not only improve the accuracy of language models but also ensure ethical and interpretable outcomes in real-world applications. By merging linguistic expertise with technical acumen, participants will explore how computational techniques can decode complex narratives, enhance human-computer interactions, and drive impactful solutions across various industries.            </p>
           </div>
         
           <div class="card">
-            <h2 class="font-bold text-xl"><br>Data Visualization and Insights</h2>
-            <p>Transform your datasets into visually compelling stories that explain your insights.</p>
+            <h2 class="font-bold text-xl"><br>Data Visualization and Insights 📈</h2>
+            <p>The Data Visualization and Insights track invites participants to transform raw data into compelling visual narratives that illuminate key patterns and trends. In this track, competitors are challenged to design intuitive, interactive visualizations—from dynamic dashboards and intricate charts to geospatial maps—that not only capture the complexity of the data but also present clear, actionable insights. Emphasizing both aesthetic appeal and analytical rigor, this track encourages innovative approaches to storytelling with data, enabling participants to bridge the gap between technical data analysis and strategic decision-making. Whether you're passionate about graphic design, data science, or user experience, this track offers a platform to showcase how visualizing data can unlock transformative insights and drive meaningful change.            </p>
           </div>
         
-          <div class="card">
-            <h2 class="font-bold text-xl"><br>Best Use of Groq</h2>
-            <p>Utilize Groq's technology in your most interesting way.</p>
-          </div>
         
-          <div class="card">
-            <h2 class="font-bold text-xl"><br>Sports Analytics</h2>
-            <p>Analyze sports-related performance, game strategories, and/or fan engagement using the data.</p>
-          </div>
         </div>
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 py-10 sm:text-4xl text-center">
+            Additional Prize Tracks:
+        </h1> 
           <style>
             .card-container {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, auto);
                 gap: 20px;
                 padding: 20px;
@@ -194,9 +198,19 @@
                 justify-content: center;
 
                 }
+            .notes {
+                background: #111827;
+                color: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+                align-items: center;
+
+                }
 
             .card {
-                background: linear-gradient(to right, #1e1739, #1c1733);
+                background: #111827;
                 color: white;
                 padding: 20px;
                 border-radius: 12px;
@@ -227,6 +241,128 @@
 
 
           </style>
+
+          <style>
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 20px;
+                padding: 20px;
+
+                width: 90vw;
+                margin: 0 auto;
+                justify-content: center;
+
+                }
+
+            .card {
+                background: #111827;
+                color: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                }
+
+            .card:hover {
+                transform: scale(1.15);
+                }
+
+            @media (max-width: 900px) {
+                .card-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                }
+
+            @media (max-width: 600px) {
+                .card-container {
+                    grid-template-columns: 1fr;
+                    
+                }
+                }
+
+            ul {
+                margin: 10px 0;
+                padding-left: 30px;
+                list-style-type: disc;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+
+          </style>
+
+
+<div class ="additional-container">
+    <div class="additional">
+        <h2 class="font-bold text-xl"><br>Sports Analytics (falls under Predictive Modeling) 🏈</h2>
+        <p>Step into the exciting world of sports analytics with our Sports Analytics Prize track—a specialized challenge where your passion for sports converges with advanced data science. In this track, you'll work exclusively with rich, domain-specific sports data—from player statistics and game metrics to team dynamics and fan engagement—to uncover hidden patterns and develop actionable strategies that can transform competitive performance. Participants are encouraged to apply cutting-edge analytical techniques to address sports-specific challenges, such as optimizing in-game tactics, enhancing player performance, and reimagining team strategy. Whether you're a seasoned sports aficionado or a data enthusiast eager to break new ground, this track offers a unique opportunity to demonstrate how tailored, data-driven insights can revolutionize the world of sports.        </p>
+        <ul>
+            <p><li>Make sure to <u>indicate on the DevPost submission</u> if you would like to be considered for the Sports Analytics prize track!</li></p>
+            <p><b><li>Only projects doing predictive modeling on sports data are eligible to be considered for this prize track. </b></li></p>
+        </ul>
+    </div>
+    
+      <div class="additional">
+        <h2 class="font-bold text-xl"><br>Best Use of Groq 🤖</h2>
+        <p>Introducing the Best Use of GROQ Prize Track—a unique challenge that invites participants to harness GROQ's state-of-the-art technology to unlock new levels of performance and efficiency in AI and data science. This track celebrates innovative solutions that leverage GROQ's cutting-edge hardware acceleration to enhance deep learning models, optimize real-time analytics, and push the boundaries of what's possible in various domains such as computer vision, NLP, and beyond. Show us how you can transform raw data into impactful insights by integrating GROQ technology into your projects, and stand a chance to win the coveted Best Use of GROQ Prize. Embrace the challenge, redefine performance, and let your solution set a new standard in high-speed, high-efficiency computing.</p>
+        <ul>
+            <p><li>Make sure to <u>indicate on the DevPost submission</u> if you would like to be considered for the Best Use of Groq prize track!</li></p>
+            <p><li><b>All projects that incorporate Groq are eligible to be considered for this prize track.</b></li></p>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .additional-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+        padding: 20px;
+
+        width: 90vw;
+        margin: 0 auto;
+        justify-content: center;
+
+        }
+
+    .additional {
+        background: #111827;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+
+    .additional:hover {
+        transform: scale(1.15);
+        }
+
+    @media (max-width: 900px) {
+        .additional-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        }
+
+    @media (max-width: 600px) {
+        .additional-container {
+            grid-template-columns: 1fr;
+            
+        }
+        }
+
+
+
+  </style>
       
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 

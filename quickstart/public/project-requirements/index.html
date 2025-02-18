@@ -73,9 +73,6 @@
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
             
             
-            <a id="devpost" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
-                DevPost
-            </a>
             
             <a id="agenda" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/agenda/" title="Agenda">
                 Agenda
@@ -103,7 +100,11 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-30 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                     <div class="px-2 py-2 bg-white rounded-md shadow text-primary-900">
                         
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/judging-criteria">Judging Criteria</a>
+                        <a id="devpost" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" target="_blank" href="https://dataorbit-2025.devpost.com/" title="DevPost">
+                            DevPost
+                        </a>
+
+                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://localhost:1313/judging-criteria">Judging Criteria</a>
                         
                         <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/project-requirements/">Project Requirements</a>
                         
@@ -116,9 +117,9 @@
             
             
             
-            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://dataorbit.info/sponsor-codes/" title="Sponsor Codes">
+            <a id ="sponsorcodes" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline" href="http://localhost:1313/resources/" title="Resources">
 
-                Sponsor Codes
+                Resources
             </a>
             
             <a id="register" href="https://tinyurl.com/dataorbit25-reg" target="_blank" class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg bg-purple-200 md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-200 focus:bg-primary-200 focus:outline-none focus:shadow-outline hidden" style="background-color: blueviolet;">
@@ -164,7 +165,7 @@
         </ul>
         <br>
         <h2 class="font-bold">3. Create a Submission on DevPost</h2>
-        <p>Ensure your project is submitted on DevPost.</p>
+        <p>Ensure your project is submitted on <a href="https://dataorbit-2025.devpost.com/" target="_blank" style="color: blue;"><u>DevPost</u></a>.</p>
 
         <br>
         <h2 class="font-bold">Important Deadlines</h2>
@@ -173,6 +174,19 @@
             <li>Submission Deadline: Sunday, February 23 at <u>5 PM PST</u></li>
             <li>Late or early submissions will not be considered.</li>
         </ul>
+        <p>-----</p>
+        <br>
+        <p><b>**OPTIONAL**</b></p>
+        <p>Submit your entry for highest Slither.io score for a <u>$20 Caje Gift Card</u>!</p>
+        <p>Rules for Submission:</p>
+        <ul>
+            <li>You must play under your own name, as displayed on your Hacker Badge.</li>
+            <li>You must submit an image of your Hacker Badge.</li>
+            <li>You must submit a screenshot of your highest score.</li>
+            <li>You must submit this <a href="https://forms.gle/39bcvP1Qu3XPAbS69" target="_blank" style="color: blue;"><u>form</u></a>.</li>
+        </ul>
+
+
       </div>
     </div>
 
@@ -196,7 +210,7 @@
             margin-bottom: 10px;
         }
         .card {
-            background: linear-gradient(to right, #1e1739, #1c1733);
+            background: #111827;
             color: white;
             padding: 20px;
             border-radius: 12px;
