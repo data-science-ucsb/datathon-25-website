@@ -149,10 +149,11 @@
     </span>
   </header>
   <div class ="card-container">
-    
+   
       
     <div class="card">
       <h2 class="font-bold text-xl"><br>Data Science UCSB Technical Development Officers</h2>
+      <img src="https://i.imgur.com/t3dU6qF.png" alt="Logo" class="card-logo">
       <p>Saturday 3pm-5pm and Sunday 12pm-4pm</p>
       <p>- In person at De Anza.</p>
       <p>- Online over <a href="https://ucsb.zoom.us/j/89697502964?pwd=aebBKZSBWp0iyIysZpqiHaknYxIvmz.1" target="_blank" style="color: blue;"><u>Zoom</u></a>.<br>- Meeting ID: 896 9750 2964<br>- Passcode: 582531</p>
@@ -160,19 +161,23 @@
   
     <div class="card">
       <h2 class="font-bold text-xl"><br>ACM Officers</h2>
-      <p>- In person at De Anza.</p>
+      <img src="https://i.imgur.com/MuEO0AD.png" alt="Logo" class="card-logo">
       <p>Aman: Saturday 3pm-5pm</p>
       <p>Deniz: Sunday 12pm-4pm</p>
+      <p>- In person at De Anza.</p>
+      
     </div>
-  
+   
     <div class="card">
-      <h2 class="font-bold text-xl"><br>SingleStore</h2>
+      <h2 class="font-bold text-xl"><br>SingleStore Representatives</h2>
+      <img src="https://i.imgur.com/ZGT5jjU.png" alt="Logo" class="card-logo">
       <p>Sunday 1am-10am</p>
       <p>- SingleStore <a href="https://discord.gg/qyWGqnyd6y" target="_blank" style="color: blue;"><u>Discord</u></a></p>
     </div>
 
     <div class="card">
         <h2 class="font-bold text-xl"><br>UCSB Professors</h2>
+        <img src="https://i.imgur.com/L7sjXHA.png" alt="Logo" class="card-logo">
         <p>Professor Coburn: Saturday 3pm-5pm</p>
         <p>Professor Ichiba: Sunday 2pm-4pm</p>
         <p>- Online over <a href="https://ucsb.zoom.us/j/89697502964?pwd=aebBKZSBWp0iyIysZpqiHaknYxIvmz.1" target="_blank" style="color: blue;"><u>Zoom</u></a>.<br>- Meeting ID: 896 9750 2964<br>- Passcode: 582531</p>
@@ -192,7 +197,13 @@
           justify-content: center;
 
           }
-
+    .card-logo {
+        width: 500px; 
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+        padding: 20px;
+    }
       .card {
           background: #111827;
           color: white;
@@ -204,6 +215,9 @@
           align-items: center;
           justify-content: center;
           }
+    .card:nth-child(4) {
+        grid-column: 2; 
+    }
 
       .card:hover {
           transform: scale(1.15);
